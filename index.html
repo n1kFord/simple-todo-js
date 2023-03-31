@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>simple-todo-js</title>
+        <link rel="stylesheet" href="./index.css" type="text/css" />
+    </head>
+    <body>
+        <main class="app">
+            <section class="greeting">
+                <h2 class="greeting__title">
+                    What's up,
+                    <input type="text" id="name" placeholder="name here..." />
+                </h2>
+            </section>
+
+            <section class="create">
+                <h3 class="create__title">CREATE A TODO</h3>
+                <form action="" id="create-new-todo" class="create__form">
+                    <h4 class="create__form__title">
+                        What's on your todo list?
+                    </h4>
+                    <input
+                        type="text"
+                        name="content"
+                        id="content"
+                        class="create__form__input"
+                        placeholder="e.g. make a video"
+                    />
+                    <h4 class="create__form__hint">Pick a category</h4>
+                    <div class="options">
+                        <label>
+                            <input
+                                type="radio"
+                                name="category"
+                                id="category1"
+                                value="business"
+                            />
+                            <span class="bubble business"></span>
+                            <p>Business</p>
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="category"
+                                id="category2"
+                                value="personal"
+                            />
+                            <span class="bubble personal"></span>
+                            <p>Personal</p>
+                        </label>
+                    </div>
+
+                    <input
+                        type="submit"
+                        value="Add todo"
+                        class="create__submit"
+                    />
+                </form>
+            </section>
+
+            <section class="list">
+                <h3 class="list__title">TODO LIST</h3>
+                <div class="list__container" id="todo-list">
+                    <div class="list__item">
+                        <label>
+                            <input type="checkbox" />
+                            <span class="bubble business"></span>
+                        </label>
+
+                        <div class="list__item__content">
+                            <input type="text" value="Make a video" readonly />
+                        </div>
+
+                        <div class="list__item__actions">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="list__item">
+                        <label>
+                            <input type="checkbox" />
+                            <span class="bubble personal"></span>
+                        </label>
+
+                        <div class="list__item__content">
+                            <input type="text" value="Go to work" readonly />
+                        </div>
+
+                        <div class="list__item__actions">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="./index.js"></script>
+    </body>
+</html>
